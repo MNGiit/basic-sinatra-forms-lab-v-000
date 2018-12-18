@@ -18,4 +18,7 @@ class App < Sinatra::Base
       erb :team
   end
   
+  get "/team"
+    erb :team
+  end
 end
