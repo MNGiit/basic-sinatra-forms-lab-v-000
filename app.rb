@@ -8,11 +8,14 @@ class App < Sinatra::Base
   
   post "/newteam" do
       @team_name = params[:team_name]
-      <p>Coach: <input type="text" name="coach"></p>
-      <p>Point Guard: <input type="text" name="point_guard"></p>
-      <p>Shooting Guard: <input type="text" name="shooting_guard"></p>
-      <p>Small Foward: <input type="text" name="small_foward"></p>
-      <p>Power Forward: <input type="text" name="power_forward"></p>
-      <p>Center: <input type="text" name="center"></p>
+      @coach = params[:coach]
+      @point_guard = params[:point_guard]
+      @shooting_guard = params[:shooting_guard]
+      @small_forward = params[:small_forward]
+      @power_forward = params[:power_forward]
+      @center = params[:center]
+      
+      erb :team
+  end
   
 end
